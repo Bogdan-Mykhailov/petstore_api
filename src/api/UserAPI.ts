@@ -5,7 +5,7 @@ export default class UserAPI{
   private readonly baseUrl: string;
 
   constructor() {
-    this.baseUrl = 'https://petstore.swagger.io/v2/'
+    this.baseUrl = 'https://petstore.swagger.io/v2/';
   }
 
   async createUser(data: User) {
@@ -21,7 +21,7 @@ export default class UserAPI{
   }
 
   async login(username: string, password: string): Promise<{message: string}> {
-    const response = await axios.get(`${this.baseUrl}user/login`, {params: {username, password}})
+    const response = await axios.get(`${this.baseUrl}user/login`, {params: {username, password}});
 
     return {
       message: response.data.message,

@@ -3,6 +3,7 @@ import UserAPI from "../api/UserAPI";
 import {user, users} from "../data/data";
 
 const api = new UserAPI();
+
 test.describe('Petstore API user functionality testing', () => {
   test('Verify creating a User', async () => {
     const response = await api.createUser(user);
